@@ -1,0 +1,179 @@
+[06-02|01:00:35.345] INFO cmd/root.go:137 -----------
+[06-02|01:00:35.346] INFO cmd/root.go:138 cmd: completion bash
+[06-02|01:00:35.447] WARN cmd/root.go:189 failed to read last-actions file! This is non-critical but is logged {"error": "open /root/.avalanche-cli/.last_actions.json: no such file or directory"}
+[06-02|01:02:20.515] INFO cmd/root.go:137 -----------
+[06-02|01:02:20.517] INFO cmd/root.go:138 cmd: blockchain create testnet --proof-of-authority --vm /subnet-vm/subnet-vm --validator-manager-owner 0c0deba5e0000000000000000000000000000000 --genesis /genesis.json --force --sovereign=true --evm-token 4242 --warp --icm
+[06-02|01:02:23.068] INFO ux/output.go:43 [92m✓[0m Validator Manager Contract owner address 0c0deba5e0000000000000000000000000000000
+
+[06-02|01:02:23.068] INFO ux/output.go:43 creating custom VM blockchain testnet
+
+[06-02|01:02:23.482] INFO ux/output.go:43 File /root/.avalanche-cli/subnets/testnet/chain.json successfully written
+
+[06-02|01:02:23.497] INFO ux/output.go:43 [92m✓[0m Successfully created blockchain configuration
+
+[06-02|01:02:23.498] INFO ux/output.go:43 Run 'avalanche blockchain describe' to view all created addresses and what their roles are
+
+[06-02|01:02:36.066] INFO cmd/root.go:137 -----------
+[06-02|01:02:36.068] INFO cmd/root.go:138 cmd: blockchain deploy testnet --local
+[06-02|01:02:36.202] INFO ux/output.go:43 Deploying [testnet] to Local Network
+
+[06-02|01:02:36.660] INFO ux/output.go:43 
+
+[06-02|01:02:36.662] INFO binutils/release.go:98 Using binary version {"version": "v1.13.0"}
+[06-02|01:02:36.662] INFO ux/output.go:43 Installing avalanchego-v1.13.0...
+
+[06-02|01:02:41.703] INFO ux/output.go:43 avalanchego-v1.13.0 installation successful
+
+[06-02|01:02:41.716] INFO ux/output.go:43 AvalancheGo path: /root/.avalanche-cli/bin/avalanchego/avalanchego-v1.13.0/avalanchego
+
+
+[06-02|01:02:41.716] INFO ux/output.go:43 Booting Network. Wait until healthy...
+
+[06-02|01:02:41.717] INFO tmpnet/network.go:199 preparing configuration for new network {"avalanchegoPath": "/root/.avalanche-cli/bin/avalanchego/avalanchego-v1.13.0/avalanchego", "pluginDir": "/root/.avalanche-cli/plugins"}
+[06-02|01:02:42.520] INFO tmpnet/node_process.go:123 started local node {"nodeID": "NodeID-7Xhw2mDxuDS44j42TCB6U5579esbSt3Lg", "dataDir": "/root/.avalanche-cli/runs/network_20250602_010241/NodeID-7Xhw2mDxuDS44j42TCB6U5579esbSt3Lg", "isEphemeral": false}
+[06-02|01:02:42.956] INFO tmpnet/node_process.go:123 started local node {"nodeID": "NodeID-MFrZFVCXPv5iCn6M9K6XduxGTYp891xXZ", "dataDir": "/root/.avalanche-cli/runs/network_20250602_010241/NodeID-MFrZFVCXPv5iCn6M9K6XduxGTYp891xXZ", "isEphemeral": false}
+[06-02|01:02:47.984] INFO ux/output.go:43 
+
+[06-02|01:02:47.984] INFO ux/output.go:43 Node logs directory: /root/.avalanche-cli/runs/network_20250602_010241/<NodeID>/logs
+
+[06-02|01:02:47.984] INFO ux/output.go:43 
+
+[06-02|01:02:47.984] INFO ux/output.go:43 Network ready to use.
+
+[06-02|01:02:47.985] INFO ux/output.go:43 
+
+[06-02|01:02:48.050] INFO ux/output.go:43 Using [P-custom18jma8ppw3nhx5r4ap8clazz0dps7rv5u9xde7p] to be set as a change owner for leftover AVAX
+
+[06-02|01:02:48.149] INFO binutils/release.go:98 Using binary version {"version": "v1.13.0"}
+[06-02|01:02:48.162] INFO ux/output.go:43 AvalancheGo path: /root/.avalanche-cli/bin/avalanchego/avalanchego-v1.13.0/avalanchego
+
+
+[06-02|01:02:48.162] INFO ux/output.go:43 [92m✓[0m Local cluster testnet-local-node-local-network not found. Creating...
+
+[06-02|01:02:48.260] INFO ux/output.go:43 Starting local avalanchego node using root: /root/.avalanche-cli/local/testnet-local-node-local-network ...
+
+[06-02|01:02:48.260] INFO ux/spinner.go:48 Booting Network. Wait until healthy... [Spinner Start]
+[06-02|01:02:48.261] INFO tmpnet/network.go:199 preparing configuration for new network {"avalanchegoPath": "/root/.avalanche-cli/bin/avalanchego/avalanchego-v1.13.0/avalanchego", "pluginDir": "/root/.avalanche-cli/local/testnet-local-node-local-network/plugins"}
+[06-02|01:02:48.801] INFO tmpnet/node_process.go:123 started local node {"nodeID": "NodeID-2eunmMAEFURBQWwxNhJaUPdsACLXuGvyW", "dataDir": "/root/.avalanche-cli/local/testnet-local-node-local-network/NodeID-2eunmMAEFURBQWwxNhJaUPdsACLXuGvyW", "isEphemeral": false}
+[06-02|01:02:48.814] INFO ux/spinner.go:77 Booting Network. Wait until healthy... [Spinner Complete]
+[06-02|01:02:48.814] INFO ux/output.go:43 [92m✓[0m Avalanchego started and ready to use from /root/.avalanche-cli/local/testnet-local-node-local-network
+
+[06-02|01:02:48.814] INFO ux/output.go:43 
+
+[06-02|01:02:48.814] INFO ux/output.go:43 Node logs directory: /root/.avalanche-cli/local/testnet-local-node-local-network/<NodeID>/logs
+
+[06-02|01:02:48.815] INFO ux/output.go:43 
+
+[06-02|01:02:48.815] INFO ux/output.go:43 Network ready to use.
+
+[06-02|01:02:48.815] INFO ux/output.go:43 
+
+[06-02|01:02:48.832] INFO ux/output.go:43 URI: http://127.0.0.1:40231
+
+[06-02|01:02:48.832] INFO ux/output.go:43 NodeID: NodeID-2eunmMAEFURBQWwxNhJaUPdsACLXuGvyW
+
+[06-02|01:02:48.832] INFO ux/output.go:43 
+
+[06-02|01:02:48.848] INFO ux/output.go:43 Your blockchain control keys: [P-custom18jma8ppw3nhx5r4ap8clazz0dps7rv5u9xde7p]
+
+[06-02|01:02:48.848] INFO ux/output.go:43 Your blockchain auth keys for chain creation: [P-custom18jma8ppw3nhx5r4ap8clazz0dps7rv5u9xde7p]
+
+[06-02|01:02:48.860] INFO ux/output.go:43 [1;33mCreateSubnetTx fee: 0.000010278 AVAX[0;0m
+
+[06-02|01:02:48.986] INFO ux/output.go:43 Blockchain has been created with ID: 2W9boARgCWL25z6pMFNtkCfNA5v28VGg9PmBgUJfuKndEdhrvw
+
+[06-02|01:02:50.990] INFO ux/output.go:43 Now creating blockchain...
+
+[06-02|01:02:51.001] INFO ux/output.go:43 [1;33mCreateChainTx fee: 0.000129056 AVAX[0;0m
+
+[06-02|01:02:51.507] INFO ux/output.go:43 +--------------------------------------------------------------------+
+|                         DEPLOYMENT RESULTS                         |
++---------------+----------------------------------------------------+
+| Chain Name    | testnet                                            |
++---------------+----------------------------------------------------+
+| Subnet ID     | 2W9boARgCWL25z6pMFNtkCfNA5v28VGg9PmBgUJfuKndEdhrvw |
++---------------+----------------------------------------------------+
+| VM ID         | tGBrM9sUKNDndS9ZnHHePP9d995GTg2FkmfAGjZkTYd2ahPUQ  |
++---------------+----------------------------------------------------+
+| Blockchain ID | 2GEZdheCiiG6WAesMEUxckkkFGLYYe35tEkV7kUX6c1Vh2AiRB |
++---------------+                                                    |
+| P-Chain TXID  |                                                    |
++---------------+----------------------------------------------------+
+
+[06-02|01:02:51.508] INFO ux/output.go:43 Now calling ConvertSubnetToL1Tx...
+
+[06-02|01:02:51.519] INFO ux/output.go:43 [1;33mConvertSubnetToL1Tx fee: 0.000036992 AVAX[0;0m
+
+[06-02|01:02:51.626] INFO ux/output.go:43 ConvertSubnetToL1Tx ID: WBRTjCLBrpt27QNadkQRh5vC6Jab53yjxHcjzfr8gQZvg8VKa
+
+[06-02|01:03:21.967] INFO ux/output.go:43 
+
+[06-02|01:03:21.971] INFO ux/output.go:43 [1;33mValidator Manager Protocol: v1.0.0[0;0m
+
+[06-02|01:03:22.553] INFO ux/output.go:43 Restarting node NodeID-2eunmMAEFURBQWwxNhJaUPdsACLXuGvyW to track newly deployed subnet/s
+
+[06-02|01:03:23.328] INFO tmpnet/node_process.go:123 started local node {"nodeID": "NodeID-2eunmMAEFURBQWwxNhJaUPdsACLXuGvyW", "dataDir": "/root/.avalanche-cli/local/testnet-local-node-local-network/NodeID-2eunmMAEFURBQWwxNhJaUPdsACLXuGvyW", "isEphemeral": false}
+[06-02|01:03:23.330] INFO ux/output.go:43 Waiting for blockchain 2GEZdheCiiG6WAesMEUxckkkFGLYYe35tEkV7kUX6c1Vh2AiRB to be bootstrapped
+
+[06-02|01:03:24.332] INFO ux/output.go:43 [92m✓[0m Local Network successfully tracking testnet
+
+[06-02|01:03:24.398] INFO ux/spinner.go:48 Checking if node is healthy... [Spinner Start]
+[06-02|01:03:24.401] INFO ux/spinner.go:77 Checking if node is healthy... [Spinner Complete]
+[06-02|01:03:24.401] INFO ux/output.go:43 [92m✓[0m Node is healthy after 0 seconds
+
+[06-02|01:03:24.432] INFO ux/output.go:43 Initializing Proof of Authority Validator Manager contract on blockchain testnet ...
+
+[06-02|01:03:27.511] INFO ux/output.go:43 [91m✗[0m failed to match error selector on trace: trace does not contain output field
+
+[06-02|01:03:27.511] INFO ux/output.go:43 error trace for initialize PoA manager error:
+
+[06-02|01:03:27.512] INFO ux/output.go:43 map[string]interface {}{"calls":[]interface {}{map[string]interface {}{"error":"execution reverted", "from":"0x0feedc0de0000000000000000000000000000000", "gas":"0x2ee94ad", "gasUsed":"0xd4", "input":"0xd588c18fc5e17d557e60fe8002dee4b7943d8a85c9171a32f5f082765d430b8ab5f98441000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000140000000000000000000000000c0deba5e0000000000000000000000000000000", "to":"0x0c0deba5e0000000000000000000000000000000", "type":"DELEGATECALL", "value":"0x0"}}, "error":"execution reverted", "from":"0x8db97c7cece249c2b98bdc0226cc4c2a57bf52fc", "gas":"0x2faf080", "gasUsed":"0x72d4", "input":"0xd588c18fc5e17d557e60fe8002dee4b7943d8a85c9171a32f5f082765d430b8ab5f98441000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000140000000000000000000000000c0deba5e0000000000000000000000000000000", "to":"0x0feedc0de0000000000000000000000000000000", "type":"CALL", "value":"0x0"}
+
+[06-02|01:03:27.719] INFO ux/output.go:43 Error: failure initializing poa validator manager: execution reverted (tx failed to be submitted)
+
+[06-02|01:04:18.448] INFO cmd/root.go:137 -----------
+[06-02|01:04:18.450] INFO cmd/root.go:138 cmd: network start
+[06-02|01:04:18.604] INFO ux/output.go:43 Network has already been booted.
+
+[06-02|01:04:23.530] INFO cmd/root.go:137 -----------
+[06-02|01:04:23.532] INFO cmd/root.go:138 cmd: network status
+[06-02|01:04:23.996] INFO ux/output.go:43 Network is Up:
+
+[06-02|01:04:23.996] INFO ux/output.go:43   Number of Nodes: 3
+
+[06-02|01:04:23.996] INFO ux/output.go:43   Number of Blockchains: 1
+
+[06-02|01:04:23.996] INFO ux/output.go:43   Network Healthy: true
+
+[06-02|01:04:23.997] INFO ux/output.go:43   Blockchains Healthy: true
+
+[06-02|01:04:23.997] INFO ux/output.go:43 
+
+[06-02|01:04:24.104] INFO ux/output.go:43 +--------------------------------------------------------------------------------------------------+
+|                                         TESTNET RPC URLS                                         |
++-----------+--------------------------------------------------------------------------------------+
+| Localhost | http://127.0.0.1:40231/ext/bc/2GEZdheCiiG6WAesMEUxckkkFGLYYe35tEkV7kUX6c1Vh2AiRB/rpc |
++-----------+--------------------------------------------------------------------------------------+
+
+[06-02|01:04:24.104] INFO ux/output.go:43 
+
+[06-02|01:04:24.124] INFO ux/output.go:43 +------------------------------------------------------------------+
+|                           PRIMARY NODES                          |
++------------------------------------------+-----------------------+
+| NODE ID                                  | LOCALHOST ENDPOINT    |
++------------------------------------------+-----------------------+
+| NodeID-7Xhw2mDxuDS44j42TCB6U5579esbSt3Lg | http://127.0.0.1:9650 |
++------------------------------------------+-----------------------+
+| NodeID-MFrZFVCXPv5iCn6M9K6XduxGTYp891xXZ | http://127.0.0.1:9652 |
++------------------------------------------+-----------------------+
+
+[06-02|01:04:24.220] INFO ux/output.go:43 +-----------------------------------------------------------------------------+
+|                                   L1 NODES                                  |
++------------------------------------------+------------------------+---------+
+| NODE ID                                  | LOCALHOST ENDPOINT     | L1      |
++------------------------------------------+------------------------+---------+
+| NodeID-2eunmMAEFURBQWwxNhJaUPdsACLXuGvyW | http://127.0.0.1:40231 | testnet |
++------------------------------------------+------------------------+---------+
+
+[06-02|01:04:38.679] INFO cmd/root.go:137 -----------
+[06-02|01:04:38.681] INFO cmd/root.go:138 cmd: key list

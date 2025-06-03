@@ -1,0 +1,18 @@
+=============== Jun 2, 2025 (UTC) ===============
+01:02:48.694154 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+01:02:48.708056 db@open opening
+01:02:48.710022 version@stat F·[] S·0B[] Sc·[]
+01:02:48.712641 db@janitor F·2 G·0
+01:02:48.712818 db@open done T·4.613992ms
+01:03:22.567157 db@close closing
+01:03:22.568083 db@close done T·920.491µs
+=============== Jun 2, 2025 (UTC) ===============
+01:03:22.923207 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+01:03:22.927595 version@stat F·[] S·0B[] Sc·[]
+01:03:22.928009 db@open opening
+01:03:22.929168 journal@recovery F·1
+01:03:22.929355 journal@recovery recovering @1
+01:03:22.936343 memdb@flush created L0@2 N·98 S·85KiB "gen..sID,v1":"\xf3ow..ork,v33"
+01:03:22.937487 version@stat F·[1] S·85KiB[85KiB] Sc·[0.25]
+01:03:22.952012 db@janitor F·3 G·0
+01:03:22.952195 db@open done T·24.032129ms

@@ -1,0 +1,28 @@
+services:
+  testnet:
+    container_name: testnet
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+
+      - chain_vol:/root/.avalanche-cli       
+    ports:
+      - "9650:9650"                               
+      - "9651:9651"
+    networks:
+      - transcendence
+
+networks:
+  transcendence:
+    name: transcendence
+    driver: bridge
+
+volumes:
+  chain_vol:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /c/Users/patry/tra/chain_vol
