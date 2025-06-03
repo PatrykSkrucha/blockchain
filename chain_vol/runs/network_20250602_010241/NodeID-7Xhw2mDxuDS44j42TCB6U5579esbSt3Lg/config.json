@@ -1,9 +1,0 @@
-{
-  "NetworkUUID": "0561fb16-b40e-41ed-bd3f-a6d26db8c760",
-  "NetworkOwner": "",
-  "IsEphemeral": false,
-  "RuntimeConfig": {
-    "AvalancheGoPath": "/root/.avalanche-cli/bin/avalanchego/avalanchego-v1.13.0/avalanchego",
-    "ReuseDynamicPorts": false
-  }
-}

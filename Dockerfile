@@ -41,13 +41,13 @@
 
 
 
-#avalanche blockchain create testnet \
-#  --proof-of-authority \
+# avalanche blockchain create testnet \
 #  --vm /subnet-vm/subnet-vm \
-#  --validator-manager-owner "0c0deba5e0000000000000000000000000000000" \
+#  --validator-manager-owner 0c0deba5e0000000000000000000000000000000 \
 #  --genesis /genesis.json \
 #  --force \
 #  --sovereign=true \
+#  --proof-of-authority \
 #  --evm-token "4242" \
 #  --warp \
 #  --icm

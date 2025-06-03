@@ -17,7 +17,11 @@ services:
 networks:
   transcendence:
     name: transcendence
+    enable_ipv6: true
     driver: bridge
+    ipam:
+      config:
+        - subnet: 2001:db::/64
 
 volumes:
   chain_vol:
@@ -25,4 +29,4 @@ volumes:
     driver_opts:
       o: bind
       type: none
-      device: /c/Users/patry/tra/chain_vol
+      device: $HOME/blockchain/chain_vol
