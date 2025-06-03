@@ -1,8 +1,8 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/home/patryk/SimpleContract/contracts/Counter.sol": {
-      "lastModificationDate": 1748710864514,
+    "/home/pskrucha/blockchain/contracts/Counter.sol": {
+      "lastModificationDate": 1748956605508,
       "contentHash": "f1b384946b3b781e09a688772999abef",
       "sourceName": "contracts/Counter.sol",
       "solcConfig": {

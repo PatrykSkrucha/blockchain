@@ -1,7 +1,7 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  const contractAddress = "0x14a91A0C8466925B99c1927BAe32B54177fa162b"; // Your deployed contract address
+  const contractAddress = "0xbbD15ff2a9c8d9f1420ff06eEd3D6050A22A4eBd"; // Your deployed contract address
 
   // Get the contract factory and attach to deployed contract
   const Counter = await ethers.getContractFactory("Counter");
