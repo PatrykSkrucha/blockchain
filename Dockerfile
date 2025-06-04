@@ -1,107 +1,41 @@
-##FROM golang:1.21 as builder
-
-### Install dependencies and build AvalancheGo
-##WORKDIR /app
-
-##RUN apt-get update && apt-get install bash make -y git
-
-### Clone AvalancheGo
-##RUN git clone https://github.com/ava-labs/subnet-evm.git
-
-### Build the binary
-##RUN /app/subnet-evm/scripts/build.sh
-
-## ----------------------------
-## Final image
-## ----------------------------
-#FROM debian:bookworm
-
-#RUN apt-get update && apt-get install -y ca-certificates curl git bash golang && rm -rf /var/lib/apt/lists/*
-
-#RUN curl -sSfL https://raw.githubusercontent.com/ava-labs/avalanche-cli/main/scripts/install.sh | sh -s
-
-#ENV PATH="/root/bin:${PATH}"
-
-#RUN git clone https://github.com/ava-labs/subnet-evm.git
-
-#RUN /subnet-evm/scripts/build.sh
-## Copy avalanchego binary
-##COPY --from=builder /app/subnet-evm /subnet-evm
-
-#COPY genesis.json /genesis.json
-
-## Expose ports
-#EXPOSE 9650 9651
-
-## Run node
-##ENTRYPOINT ["avalanchego"]
-
-#CMD ["tail", "-f", "/dev/null"]
-##CMD ["avalanchego", "--chain-config-dir=/"]
-
-
-
-# avalanche blockchain create testnet \
-#  --vm /subnet-vm/subnet-vm \
-#  --validator-manager-owner 0c0deba5e0000000000000000000000000000000 \
-#  --genesis /genesis.json \
-#  --force \
-#  --sovereign=true \
-#  --proof-of-authority \
-#  --evm-token "4242" \
-#  --warp \
-#  --icm
-
-
-# ----------------------------
-# Stage 1: Build Subnet-EVM
-# ----------------------------
-#FROM golang:1.23.9 AS builder
-
-#WORKDIR /app
-
-#RUN apt-get update && apt-get install -y git
-
-## Clone Subnet-EVM
-#RUN git clone https://github.com/ava-labs/subnet-evm.git
-
-## Set build variables
-#ENV DEFAULT_PLUGIN_DIR=/build/plugins \
-#    DEFAULT_VM_ID=srEXiWaHuhNyGwPUi444Tu47ZEDwxTWrbQiuD7FmgSAQ6X7Dy \
-#    SUBNET_EVM_COMMIT=docker-build \
-#    STATIC_LD_FLAGS="-w -s"
-
-## Build the plugin manually (skip build.sh)
-#RUN mkdir -p ${DEFAULT_PLUGIN_DIR} && \
-#    cd subnet-evm && \
-#    go build -ldflags "-X github.com/ava-labs/subnet-evm/plugin/evm.GitCommit=${SUBNET_EVM_COMMIT} ${STATIC_LD_FLAGS}" \
-#    -o "${DEFAULT_PLUGIN_DIR}/${DEFAULT_VM_ID}" plugin/*.go
-
-
-# ----------------------------
-# Stage 2: Runtime image
-# ----------------------------
 FROM debian:bookworm-slim
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     ca-certificates curl git && \
     rm -rf /var/lib/apt/lists/*
 
-# Install Avalanche CLI
+RUN apt update && apt install -y curl ca-certificates bash && \
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash && \
+    export NVM_DIR="$HOME/.nvm" && \
+    . "$NVM_DIR/nvm.sh" && \
+    nvm install --lts && \
+    nvm use --lts
+
+
 RUN curl -sSfL https://raw.githubusercontent.com/ava-labs/avalanche-cli/main/scripts/install.sh | sh -s
 
 ENV PATH="/root/bin:${PATH}"
 
-# Copy the compiled plugin binary
-#COPY --from=builder /build/plugins /root/.avalanchego/plugins
-
-# Add genesis file
 COPY genesis.json /genesis.json
+
+COPY contracts/ /contracts/
 
 COPY /subnet-vm/subnet-vm /subnet-vm/subnet-vm
 
-# Expose ports
-EXPOSE 9650 9651
+RUN chmod +x /subnet-vm/subnet-vm
+
+RUN  avalanche blockchain create testnet \
+	--vm /subnet-vm/subnet-vm \
+  	--validator-manager-owner 0c0deba5e0000000000000000000000000000000 \
+  	--genesis /genesis.json \
+  	--force \
+  	--sovereign=true \
+  	--proof-of-authority \
+  	--evm-token "4242" \
+  	--warp \
+  	--icm
+
+#RUN avalanche blockchain deploy testnet --local
 
 # Run AvalancheGo (you can change CMD later)
 CMD ["tail", "-f", "/dev/null"]

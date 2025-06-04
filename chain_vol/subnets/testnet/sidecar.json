@@ -1,0 +1,55 @@
+{
+    "Name": "testnet",
+    "VM": "Custom",
+    "VMVersion": "",
+    "RPCVersion": 39,
+    "Subnet": "testnet",
+    "ExternalToken": false,
+    "TokenName": "4242 Token",
+    "TokenSymbol": "4242",
+    "ChainID": "",
+    "Version": "1.4.0",
+    "Networks": {
+        "Local Network": {
+            "SubnetID": "2W9boARgCWL25z6pMFNtkCfNA5v28VGg9PmBgUJfuKndEdhrvw",
+            "BlockchainID": "2doZJ8Wu3L6LK9TPZtNjSwRZuXsLApGYGBZQLs8cDNDUaopJMB",
+            "RPCVersion": 39,
+            "TeleporterMessengerAddress": "0x253b2784c75e510dD0fF1da844684a1aC0aa5fcf",
+            "TeleporterRegistryAddress": "0xF161393e2b2b0D33bf20801457F77C10F67c148B",
+            "RPCEndpoints": [
+                "http://127.0.0.1:39577/ext/bc/2doZJ8Wu3L6LK9TPZtNjSwRZuXsLApGYGBZQLs8cDNDUaopJMB/rpc"
+            ],
+            "WSEndpoints": [
+                "ws://127.0.0.1:39577/ext/bc/2doZJ8Wu3L6LK9TPZtNjSwRZuXsLApGYGBZQLs8cDNDUaopJMB/ws"
+            ],
+            "BootstrapValidators": [
+                {
+                    "NodeID": "NodeID-8KXWPtEoHA6oKvTC1mkBghXkNBrQk6TB",
+                    "Weight": 100,
+                    "Balance": 100000000,
+                    "BLSPublicKey": "0xb3c1c545dc56cf78929d6f3c36d2ecbcee6f3412a7f5494eb26897c7ff011a9cc5d835cbbc21c406e95342ec0291a8fa",
+                    "BLSProofOfPossession": "0x8abe71d5a0dd7adeaaf5714a63a1d4b741c5f37292775bac4eaa8a1867ac6e831530d550b3a8b4fe4b1894ea81899d96081de837449a5b44e897cc4f6986d69f7dcfe606174445d89af1a005c7307d1e4b1b0499213ed40d8ac8b276465e20ca",
+                    "ChangeOwnerAddr": "P-custom18jma8ppw3nhx5r4ap8clazz0dps7rv5u9xde7p",
+                    "ValidationID": "jbVejeab5dHjhakduNgg8vFh6iMrHJ9MsMDSzFLdedp7KQ2sL"
+                }
+            ],
+            "ClusterName": "testnet-local-node-local-network",
+            "ValidatorManagerAddress": "0x0FEEDC0DE0000000000000000000000000000000"
+        }
+    },
+    "ImportedFromAPM": false,
+    "ImportedVMID": "",
+    "CustomVMRepoURL": "",
+    "CustomVMBranch": "",
+    "CustomVMBuildScript": "",
+    "TeleporterReady": true,
+    "TeleporterKey": "cli-teleporter-deployer",
+    "TeleporterVersion": "v1.0.0",
+    "RunRelayer": true,
+    "SubnetEVMMainnetChainID": 0,
+    "ValidatorManagement": "Proof Of Authority",
+    "ValidatorManagerOwner": "0c0deba5e0000000000000000000000000000000",
+    "ProxyContractOwner": "0c0deba5e0000000000000000000000000000000",
+    "Sovereign": true,
+    "UseACP99": false
+}

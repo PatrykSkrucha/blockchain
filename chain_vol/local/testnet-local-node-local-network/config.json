@@ -1,0 +1,30 @@
+{
+  "UUID": "aaa748b0-4bc3-4cf5-a83e-c63615ca6182",
+  "Owner": "",
+  "DefaultFlags": {
+    "api-admin-enabled": true,
+    "health-check-frequency": "2s",
+    "http-host": "127.0.0.1",
+    "index-allow-incomplete": true,
+    "index-enabled": false,
+    "log-display-level": "OFF",
+    "log-level": "DEBUG",
+    "min-stake-duration": "1s",
+    "network-allow-private-ips": true,
+    "network-max-reconnect-delay": "1s",
+    "network-peer-list-pull-gossip-frequency": "250ms",
+    "partial-sync-primary-network": true,
+    "plugin-dir": "/root/.avalanche-cli/local/testnet-local-node-local-network/plugins",
+    "proposervm-min-block-delay": "0s",
+    "proposervm-use-current-height": true,
+    "public-ip": "127.0.0.1",
+    "staking-host": "127.0.0.1",
+    "sybil-protection-enabled": true,
+    "upgrade-file-content": "ewogICJhcHJpY290UGhhc2UxVGltZSI6ICIyMDIwLTEyLTA1VDA1OjAwOjAwWiIsCiAgImFwcmljb3RQaGFzZTJUaW1lIjogIjIwMjAtMTItMDVUMDU6MDA6MDBaIiwKICAiYXByaWNvdFBoYXNlM1RpbWUiOiAiMjAyMC0xMi0wNVQwNTowMDowMFoiLAogICJhcHJpY290UGhhc2U0VGltZSI6ICIyMDIwLTEyLTA1VDA1OjAwOjAwWiIsCiAgImFwcmljb3RQaGFzZTRNaW5QQ2hhaW5IZWlnaHQiOiAwLAogICJhcHJpY290UGhhc2U1VGltZSI6ICIyMDIwLTEyLTA1VDA1OjAwOjAwWiIsCiAgImFwcmljb3RQaGFzZVByZTZUaW1lIjogIjIwMjAtMTItMDVUMDU6MDA6MDBaIiwKICAiYXByaWNvdFBoYXNlNlRpbWUiOiAiMjAyMC0xMi0wNVQwNTowMDowMFoiLAogICJhcHJpY290UGhhc2VQb3N0NlRpbWUiOiAiMjAyMC0xMi0wNVQwNTowMDowMFoiLAogICJiYW5mZlRpbWUiOiAiMjAyMC0xMi0wNVQwNTowMDowMFoiLAogICJjb3J0aW5hVGltZSI6ICIyMDIwLTEyLTA1VDA1OjAwOjAwWiIsCiAgImNvcnRpbmFYQ2hhaW5TdG9wVmVydGV4SUQiOiAiMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTFMcG9ZWSIsCiAgImR1cmFuZ29UaW1lIjogIjIwMjAtMTItMDVUMDU6MDA6MDBaIiwKICAiZXRuYVRpbWUiOiAiMjAyNC0xMC0wOVQyMDowMDowMFoiCn0K"
+  },
+  "DefaultRuntimeConfig": {
+    "AvalancheGoPath": "/root/.avalanche-cli/bin/avalanchego/avalanchego-v1.13.0/avalanchego",
+    "ReuseDynamicPorts": false
+  },
+  "PreFundedKeys": null
+}
