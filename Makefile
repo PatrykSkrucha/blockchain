@@ -13,6 +13,9 @@ build:
 down:
 	@docker compose ${COMPOSE} down
 
+stop:
+	@docker compose ${COMPOSE} stop
+
 up:
 	@docker compose ${COMPOSE} up -d
 

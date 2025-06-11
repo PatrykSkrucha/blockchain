@@ -3,3 +3,22 @@ Where are the funds to transfer?: C-Chain
  Where are the funds going to?:C-Chain
  Which private key do you want to use to sender private key?:ewoq
  Which address do you want to destination address?: 
+
+ avalanche key transfer \
+ 
+
+ avalanchego/bin/avalanchego  \
+  --network-id=local  \
+  --chain-config-dir="$HOME/avalanche-local-data/config" \
+  --db-dir="$HOME/avalanche-local-data/db" \
+  --log-dir="$HOME/avalanche-local-data/logs" \
+  --http-host="127.0.0.1" \
+  --http-port=9650 \
+  --staking-port=9651 \
+  --sybil-protection-enabled=false \
+  --sybil-protection-disabled-weight=100 \
+  --api-admin-enabled=true \
+  --api-info-enabled=true \
+  --api-health-enabled=true \
+  --api-metrics-enabled=true \
+  --log-level="info"

@@ -2,14 +2,26 @@ services:
   testnet:
     container_name: testnet
     build:
-      context: .
+      context: requirements/blockchain
       dockerfile: Dockerfile
     restart: always
-    volumes:
-      - chain_vol:/root/.avalanche-cli       
+    #volumes:
+    #  - chain_vol:/root/.avalanche-cli       
+    expose:
+      - 5000
     ports:
       - "9650:9650"                               
       - "9651:9651"
+    networks:
+      - transcendence
+  chain_backend:
+    container_name: chain_backend
+    build:
+      context: requirements/backend
+      dockerfile: Dockerfile
+    restart: always
+    expose:
+      - 5000
     networks:
       - transcendence
 
@@ -22,10 +34,10 @@ networks:
       config:
         - subnet: 2001:db::/64
 
-volumes:
-  chain_vol:
-    driver: local
-    driver_opts:
-      o: bind
-      type: none
-      device: $HOME/blockchain/chain_vol
+#volumes:
+#  chain_vol:
+#    driver: local
+#    driver_opts:
+#      o: bind
+#      type: none
+#      device: /home/patryk/blockchain/chain_vol
