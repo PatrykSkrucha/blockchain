@@ -14,25 +14,15 @@ services:
       - "9651:9651"
     networks:
       - transcendence
-  chain_backend:
-    container_name: chain_backend
-    build:
-      context: requirements/backend
-      dockerfile: Dockerfile
-    restart: always
-    expose:
-      - 5000
-    networks:
-      - transcendence
 
 networks:
   transcendence:
     name: transcendence
-    enable_ipv6: true
+    #enable_ipv6: true
     driver: bridge
-    ipam:
-      config:
-        - subnet: 2001:db::/64
+    #ipam:
+    #  config:
+    #    - subnet: 2001:db::/64
 
 #volumes:
 #  chain_vol:

@@ -25,7 +25,7 @@ clean:
 fclean: clean
 	@docker system prune --all
 	@docker builder prune --all
-	@rm -rf chain_vol
+	@sudo rm -rf chain_vol
 
 re: fclean run
 

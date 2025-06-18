@@ -13,9 +13,9 @@ curl -sSfL https://raw.githubusercontent.com/ava-labs/avalanche-cli/main/scripts
 #export PATH="/root/bin:${PATH}"
 
  avalanche blockchain create testnet \
-	--vm /subnet-vm/subnet-vm \
+	--vm /root/subnet-vm \
   	--validator-manager-owner 0c0deba5e0000000000000000000000000000000 \
-  	--genesis /genesis.json \
+  	--genesis /root/genesis.json \
   	--force \
   	--sovereign=true \
   	--proof-of-authority \
